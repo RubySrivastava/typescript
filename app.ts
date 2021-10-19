@@ -1,7 +1,14 @@
-function add(num1:number, num2:number) {
-    return num1 + num2;
-}
+function add(num1:number, num2:number, showResult:boolean, phrase:string) {
+    const result = num1+num2;
+    if (showResult){
+        console.log(phrase+result)
+    } else {
+        return result;
+    }
+    }
+    
 const number1 = 10;
 const number2 = 7.5;
-const result = add(number1,number2);
-console.log(result);
+const printResult = true;
+const resultPhrase = 'Result is:'
+const result = add(number1,number2,printResult, resultPhrase);
