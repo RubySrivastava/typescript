@@ -1,16 +1,7 @@
-function combine(number1, number2, resultConversion) {
-    var result;
-    if (typeof number1 === 'number' && typeof number2 === 'number' || resultConversion === 'as-number') {
-        result = +number1 + +number2;
-    }
-    else {
-        result = number1.toString() + number2.toString();
-    }
-    return result;
+function add(num1, num2) {
+    return num1 + num2;
 }
-var combinedAge = combine(10, 5, 'as-number');
-console.log(combinedAge);
-var combinedStringAges = combine(10, 5, 'as-number');
-console.log(combinedStringAges);
-var combinedName = combine("Max", "Life", 'as-text');
-console.log(combinedName);
+function printResult(num) {
+    console.log('Result is' + num);
+}
+var result = printResult(add(10, 5));

@@ -1,24 +1,9 @@
-//type Combinable = number | string  !!Type Alias
-//type Conversion = 'as-number' | 'as-text'
-function combine (
-    //number1: Combinable, !!Type alias
-    number1: number | string,
-    number2: number | string,
-    //resultConversion: Conversion, !!Type alias
-    resultConversion:'as-number' | 'as-text') // string but used union types in literal types 
-    {
-    let result;
-    if (typeof number1 === 'number' && typeof number2 === 'number' || resultConversion === 'as-number') {
-        result = +number1 + +number2;
-    } else {
-        result = number1.toString() + number2.toString()
-    }
-    return result;
+function add(num1:number, num2:number){ //number functio types(return value)
+    return num1 + num2
 }
+function printResult(num:number) {  //void function types(no return)
+    console.log('Result is'+ num)
+}
+const result= printResult(add(10,5))
 
-const combinedAge = combine(10,5,'as-number')
-console.log(combinedAge)
-const combinedStringAges = combine(10,5,'as-number')
-console.log(combinedStringAges)
-const combinedName = combine("Max","Life",'as-text')
-console.log(combinedName)
+//let someValue:undefined; !! undefined type
