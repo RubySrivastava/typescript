@@ -1,6 +1,10 @@
+//type Combinable = number | string  !!Type Alias
+//type Conversion = 'as-number' | 'as-text'
 function combine (
+    //number1: Combinable, !!Type alias
     number1: number | string,
     number2: number | string,
+    //resultConversion: Conversion, !!Type alias
     resultConversion:'as-number' | 'as-text') // string but used union types in literal types 
     {
     let result;
